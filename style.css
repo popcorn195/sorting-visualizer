@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(181, 219, 166);
+}
+
+.container{
+    margin: 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.heading{
+    position: absolute;
+    top: 25px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #164b34;
+    font-size: 66px;
+    font-weight: 900;
+    z-index: 1;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+.sidebar{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    width: 270px;
+    height: 500px;
+    background-color: white;
+    border: 2px #267c57 solid;
+    position: relative;
+}
+
+.left-sidebar{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    width: 270px;
+    height: 500px;
+    background-color: white;
+    overflow: scroll;
+    scrollbar-width: none;
+    border: 2px #267c57 solid;
+    position: relative;
+}
+
+.time,.space,.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: 2px solid rgb(146, 179, 133);
+    box-sizing: border-box;
+    padding: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 90%;
+    margin: 12px;
+    word-spacing:2px;
+    letter-spacing: 0.8px;
+    background-color: rgb(247, 255, 243);
+    color: #113a28;
+}
+
+.time-container,.space-container{
+    padding-top: 15px;
+}
+
+.stage{
+    border: 4px #fff;
+    border-style: none solid solid solid;
+    display: flex;
+    position: relative;
+    height: 500px;
+    margin: 20px;
+    background-color: #164b34;
+    padding: 10px 350px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    align-items: flex-end;
+    outline: 0.9px solid #267c57;
+}
+
+.bar{
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    margin: 20px 30px;
+    background-color: #fff;
+    transition: all 300ms ease-out;
+    border-radius: 6px;
+}
+
+.bar.activate{
+background-color: rgb(63, 200, 63);
+transition-property: 0.3s;
+animation: upAndDownScale 1.5s ease-in-out;
+}
+
+@keyframes upAndDownScale{
+    0%{
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(1.08);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.generate-new{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: 2px solid rgb(146, 179, 133);
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #113a28;
+    font-size: 15px;
+    border-radius: 5px;
+    word-spacing:2px;
+    letter-spacing: 0.8px;
+    background-color: rgb(247, 255, 243);
+}
+
+.generate-new input{
+    margin: 20px;
+    padding: 2px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 1px;
+}
+
+button{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #164b34;
+    font-weight: 550;
+    border-radius: 8px;
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px;
+    width: 150px;
+}
+
+button:hover{
+    background-color: #267c57;
+}
+
+.select-algorithm{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 550;
+    display: flex;
+    flex-direction: column;
+    background-color: #164b34;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-style: none;
+    width: 150px;
+}
+
+.select-algorithm select{
+    background-color: #267c57;
+    color: #fff;
+    padding: 2px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.select-algorithm select option{
+    padding: 30px;
+}
+
+.generate-new-content{
+    accent-color: #267c57;
+    padding: 12px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" media="screen" href="style.css">
+</head>
+<body> 
+    <div class="heading">
+        <p>Sorting Visualizer</p>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <select name="" id="selectAlgorithm" class="select-algorithm">
+                <option value="bubbleSort" selected>Bubble Sort</option>
+                <option value="selectionSort">Selection Sort</option>
+                <option value="insertionSort">Insertion Sort</option>
+                <option value="quickSort">Quick Sort</option>
+                <option value="heapSort">Heap Sort</option>
+            </select>
+
+            <div class="generate-new">
+                <p>Generate New Array</p>
+                <div class="generate-new-content">
+                    <p>Size:</p>
+                    <input type="range" name="sizeArray" id="numbersBars" min="5" max="20" value="10">
+
+                    <p>Speed:</p>
+                    <input type="range" name="speedArray" id="speedBars" min="1" max="5" value="4">
+                </div>
+                <button id="generateBtn">New</button>
+            </div>
+
+            <div class="buttons">
+                <button id="solveBtn">Sort</button>
+            </div>
+        </div>
+        
+            <div class="stage" id="stage"></div>
+
+        <div class="left-sidebar">
+            <div class="details">
+                <p id="detail"></p>
+            </div>
+            <div class="time">
+                <p id="heading">Time Complexity</p>
+                <div class="time-container" id="time-container">
+                    <p id="best-time">Best Case: </p>
+                    <p id="avg-time">Average Case: </p>
+                    <p id="worst-time">Worst Case: </p>
+                </div>
+            </div>
+            <div class="space">
+                <p id="heading">Space Complexity</p>
+                <div class="space-container" id="space-container">
+                    <p id="worst-space">Worst Case: </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js" type="module" defer></script>
+</body>
+</html>
